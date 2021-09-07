@@ -1,11 +1,12 @@
 ---
-layout: default
+layout: default-widescreen
 ---
 
+{% comment %} 
 <div class="home">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+  {%- endif -%} 
 
   {{ content }}
 
@@ -16,11 +17,13 @@ layout: default
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
+
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h3>
+
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
@@ -30,5 +33,60 @@ layout: default
 
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
-
 </div>
+{% endcomment %}
+
+
+{% comment %} //begin drafting new home feed below {% endcomment %}
+
+<div class="slideshow-wrapper">
+  <div class="bss-slides" tabindex="1" autofocus="autofocus">
+      <figure>
+          <img src="/assets/images/maddi-alex-1.JPEG" />
+      </figure>
+      <figure>
+          <img src="/assets/images/aesthetic.png"/>
+      </figure>
+  </div>
+  <img src="/assets/images/crosshatch.png" style="position: absolute; top: 320px; left: 180px; width: 400px;">
+</div>
+
+<script>
+    makeBSS('.bss-slides');
+</script>
+
+<div class="home-feed-header">
+<p class="home-feed-header-featured">featured
+<p class="home-feed-header-updates">UPDATES
+</div>
+
+
+<div class="wrapper2" id="home-feed-wrapper">
+  <div class="slideshow-wrapper" style="padding: 20px; padding-bottom: 10px; background-color: white">
+    <ul class="post-list">
+          {%- for post in site.posts limit: 10 -%}
+            <li>
+              <div class="home-feed-post-wrapper">         
+                  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                  <span class="home-feed-post-date">{{ post.date | date: date_format }}</span>
+                  
+                  {%- if post.image %}
+                  <a href="{{ post.url | relative_url }}"><img class="home-feed-post-img" src={{post.image | escape }}></a>
+                  {%- endif -%}
+
+                  <a class="home-feed-post-link" href="{{ post.url | relative_url }}" style="color: #8859AD">
+                    {{ post.title | escape }}
+                  </a>
+
+                  
+                  <div class ="excerpt">
+                    {{ post.excerpt }}
+                  </div>
+
+              </div>
+            </li>
+          {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+

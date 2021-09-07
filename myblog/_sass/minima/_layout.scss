@@ -2,33 +2,39 @@
  * Site header
  */
  .site-header {
-    border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: $spacing-unit * 1.865;
     background-color: white;
-  
+    font-family: 'Poppins', sans-serif; 
+    font-weight: light;  
     // Positioning context for the mobile navigation icon
     position: sticky; top:0;//specify starting point of 0
+    z-index: 8;
   }
   
   .site-title {
     @include relative-font-size(1.625);
     font-weight: 300;
-    line-height: $base-line-height * $base-font-size * 2.25;
-    letter-spacing: -1px;
+    font-family: 'Abril Fatface', sans-serif;
+    color: $brand-color;
+    line-height: $base-line-height * $base-font-size * 2.5;
+    letter-spacing: 1px;
     margin-bottom: 0;
     float: left;
+    display: inline;
   
     &,
     &:visited {
-      color: $grey-color-dark;
+     //color: $grey-color-dark;
+     color: $brand-color;
     }
   }
   
   .site-nav {
     float: right;
-    line-height: $base-line-height * $base-font-size * 2.25;
-  
+    line-height: $base-line-height * $base-font-size * 2.5;
+
+ 
     .nav-trigger {
         display: none;
     }
@@ -38,13 +44,14 @@
     }
   
     .page-link {
-      color: $text-color;
+      color: $brand-color;
       line-height: $base-line-height;
+      margin: 20px;
   
       // Gaps between nav items, but not on the last one
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
+      &:last-child {
+        margin-right: 0px;
+      } 
     }
   
     @include media-query($on-palm) {
@@ -108,7 +115,8 @@
    */
   .site-footer {
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    padding: 15px 0;
+    padding-top: 35px;
   }
   
   .footer-heading {
@@ -123,7 +131,7 @@
   }
   
   .footer-col-wrapper {
-    @include relative-font-size(0.9375);
+    @include relative-font-size(0.7375);
     color: $grey-color;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
@@ -131,18 +139,20 @@
   
   .footer-col {
     float: left;
-    margin-bottom: $spacing-unit / 2;
+    text-align: center;
     padding-left: $spacing-unit / 2;
   }
   
   .footer-col-1 {
     width: -webkit-calc(35% - (#{$spacing-unit} / 2));
     width:         calc(35% - (#{$spacing-unit} / 2));
+    text-align: center;
   }
   
   .footer-col-2 {
     width: -webkit-calc(20% - (#{$spacing-unit} / 2));
     width:         calc(20% - (#{$spacing-unit} / 2));
+    text-align: center;
   }
   
   .footer-col-3 {
@@ -180,6 +190,13 @@
     padding: $spacing-unit 0;
     flex: 1;
   }
+
+  .page-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    margin: 30px 0;
+  }
   
   .page-heading {
     @include relative-font-size(2);
@@ -189,14 +206,7 @@
     @include relative-font-size(1.75);
   }
   
-  .post-list {
-    margin-left: 0;
-    list-style: none;
   
-    > li {
-      margin-bottom: $spacing-unit;
-    }
-  }
   
   .post-meta {
     font-size: $small-font-size;
@@ -218,12 +228,12 @@
   }
   
   .post-title {
-    @include relative-font-size(2.625);
+    @include relative-font-size(2.025);
     letter-spacing: -1px;
     line-height: 1;
   
     @include media-query($on-laptop) {
-      @include relative-font-size(2.25);
+      @include relative-font-size(2.025);
     }
   }
   
@@ -255,3 +265,125 @@
     }
   }
   
+  .post-list {
+    margin-left: 0px; 
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap; //to add scrollbar, change to nowrap.
+    overflow-x: auto;
+    justify-content: space-between;
+    background-color: white;
+  
+    > li {
+      margin-bottom: $spacing-unit;
+      display: inline-block;
+      box-sizing: border-box;
+    }
+  }
+
+
+  // layout css for home feed
+
+  #home-feed-wrapper {
+    padding: 10px;
+    background-color: $light-purple;
+  }
+
+  .home-feed-header {
+    margin: 0px;
+    margin-top: 20px;
+    text-align: center;
+    float: center;
+  }
+
+@font-face { font-family: Jadyn; src: url('/assets/fonts/JadynMaria.otf'); } 
+
+  .home-feed-header-featured {
+    font-family: 'Jadyn', sans-serif;
+    font-size: 70px;
+    display: inline;
+    margin-right: 10px;
+    color: $dark-purple;
+  }
+
+  .home-feed-header-updates {
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    font-size: 30px;
+    display: inline;
+  }
+
+  .home-feed-post-wrapper {
+    margin-right: 20px;
+    margin-left: 0px;
+    display: flex;
+    max-width: 200px;
+    flex-flow: column nowrap;
+    max-height: 386px;
+  }
+
+  .home-feed-post-date {
+    display: block;
+    color: $dark-purple;
+    font-weight: bold;
+    text-transform: uppercase;
+    @include relative-font-size(0.8);
+    margin-bottom: 5px;
+  }
+
+  .home-feed-post-img {
+    display: block;
+    width: 200px;
+    height: 230px;
+    object-fit: cover;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .home-feed-post-link {
+    
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: $grey-color-light;
+    text-align: center;
+    padding: 7px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    @include relative-font-size(0.8);
+    
+  }
+
+  .home-feed-post-link:hover {
+    background-color: $light-purple;
+  }
+
+  .excerpt {
+    display: block;
+    color: $brand-color;
+    font-weight: light;
+    font-size: 12px;
+    margin-top: 10px;
+      
+      
+      
+    > p { 
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+
+        //text-overflow: ellipsis;
+        //white-space: nowrap;
+        overflow: hidden;
+        margin: 0px;
+      }
+    }
+
+    //css for logo
+
+ 
+    .logo-container-img {
+      position: static;
+    }
