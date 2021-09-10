@@ -23,7 +23,7 @@ email: amabroad@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This site is dedicated to our adventures abroad. Feel free to connect with us personally for more updates!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://amabroad.org" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  mxddi
 
 # Build settings
