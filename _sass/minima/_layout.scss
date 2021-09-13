@@ -88,7 +88,7 @@
         text-align: center;
   
         > svg {
-          fill: $grey-color-dark;
+          fill: $dark-purple;
         }
       }
   
@@ -162,7 +162,6 @@
     width: -webkit-calc(20% - (#{$spacing-unit} / 2));
     width:         calc(20% - (#{$spacing-unit} / 2));
     text-align: center;
-    margin-left: 10px;
   }
   
   .footer-col-3 {
@@ -195,6 +194,7 @@
     display: flex;
     flex-direction: column;
     align-content: flex start;
+    padding-left: 15px;
   }
 
   .social-link {
@@ -209,7 +209,6 @@
     width: 18px;
     height: 18px;
   }
-  
   
   
   /**
