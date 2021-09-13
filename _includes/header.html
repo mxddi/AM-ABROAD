@@ -6,7 +6,13 @@
 
       {%- if page_paths -%}       
       
-      <p class="site-title">AM<img src="/assets/images/earth-logo-cropped.png" width="30px;">ABROAD
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+
+      <div class="site-title-wrapper">
+        <p class="site-title">AM</p>
+        <img src="/assets/images/earth-logo-cropped.png" width="30px;" style="padding: 0px 6px 0px 6px;">
+        <p class="site-title">ABROAD</p>
+      </div>
 
       <nav class="site-nav">
           <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -28,6 +34,8 @@
 
       </nav>
       {%- endif -%}
+
+      </div>
   </div>
 
 </header>

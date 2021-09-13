@@ -29,6 +29,12 @@
      color: $brand-color;
     }
   }
+
+  .site-title-wrapper {
+    display: flex;
+    align-items: center;
+    max-width: min-content
+  }
   
   .site-nav {
     float: right;
@@ -150,6 +156,8 @@
   }
   
   .footer-col-2 {
+    display: flex;
+    justify-content: center;
     width: -webkit-calc(20% - (#{$spacing-unit} / 2));
     width:         calc(20% - (#{$spacing-unit} / 2));
     text-align: center;
@@ -179,6 +187,25 @@
       width: -webkit-calc(100% - (#{$spacing-unit} / 2));
       width:         calc(100% - (#{$spacing-unit} / 2));
     }
+  }
+
+  .social-link-container {
+    display: flex;
+    flex-direction: column;
+    align-content: flex start;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .social-icon {
+    padding: 0px 5px 0px 0px; 
+    fill: grey;
+    width: 18px;
+    height: 18px;
   }
   
   
