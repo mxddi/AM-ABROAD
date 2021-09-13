@@ -140,6 +140,7 @@
     @include relative-font-size(0.7375);
     color: $grey-color;
     margin-left: -$spacing-unit / 2;
+    overflow: hidden;
     @extend %clearfix;
   }
   
@@ -318,10 +319,9 @@
   }
 
   .home-feed-header {
-    margin: 0px;
-    margin-top: 20px;
+    margin: 40px 0 0 0;
     text-align: center;
-    float: center;
+    line-height: 17px;
   }
 
 @font-face { font-family: Jadyn; src: url('/assets/fonts/JadynMaria.otf'); } 
