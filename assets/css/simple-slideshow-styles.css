@@ -82,7 +82,7 @@
     display: none;
     }
   }
-  
+
   .bss-next:hover, .bss-prev:hover{
     cursor: pointer;
     opacity: 1;
@@ -103,6 +103,7 @@
   }
   .bss-fullscreen{
     display: block;
+    z-index: 10;
     width: 32px;
     height: 32px;    
     background: rgba(0,0,0,.4) url(../img/arrows-alt_ffffff_64.png); 
