@@ -75,6 +75,14 @@
     -ms-user-select: none;
     user-select: none;
   }
+
+  @media only screen and (max-width: 800px) {
+
+    .bss-next, .bss-prev {
+    display: none;
+    }
+  }
+  
   .bss-next:hover, .bss-prev:hover{
     cursor: pointer;
     opacity: 1;

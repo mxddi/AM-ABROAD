@@ -223,7 +223,7 @@
 
   @include media-query($on-laptop) {
     max-width: 90%;
-    max-width: auto;
+    //max-width: auto;
     padding-right: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
   }
