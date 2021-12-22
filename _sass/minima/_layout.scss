@@ -2,7 +2,7 @@
  * Site header
  */
  .site-header {
-    border-bottom: 1px solid $grey-color-light;
+    // border-bottom: 1px solid $grey-color-light;
     min-height: $spacing-unit * 1.865;
     font-family: 'Poppins', sans-serif; 
     font-weight: light;
@@ -10,39 +10,49 @@
     // Positioning context for the mobile navigation icon
     position: sticky; top:0;//specify starting point of 0
     z-index: 8;
+    margin-top: 25px;
   }
   
+
   .site-title {
-    @include relative-font-size(1.625);
+    @include relative-font-size(1.58);
     font-weight: 300;
     font-family: 'Abril Fatface', sans-serif;
-    color: $dark-purple;
+    color: $medium-green;
     line-height: $base-line-height * $base-font-size * 2.5;
     letter-spacing: 1px;
     margin-bottom: 0;
     float: left;
     display: inline;
-  
-    &,
-    &:visited {
-     //color: $grey-color-dark;
-     color: $dark-purple;
-    }
   }
+
 
   .site-title-wrapper {
     display: flex;
     align-items: center;
-    max-width: min-content
+    max-width: min-content;
+
+    @include media-query($on-laptop) {
+      display: none;
+     }
   }
   
   .site-nav {
     float: right;
+    display: flex;
     line-height: $base-line-height * $base-font-size * 2.5;
 
  
     .nav-trigger {
         display: none;
+    }
+
+    .trigger {
+      display: flex;
+      justify-content: space-between;
+      @include media-query($on-laptop) {
+      flex-direction: column;
+       }
     }
   
     .menu-icon {
@@ -50,10 +60,12 @@
     }
   
     .page-link {
-      color: $dark-purple;
+      color: $medium-green;
       line-height: $base-line-height;
-      margin: 20px;
+      margin: 20px 45px;
+      white-space: nowrap;
   
+      
       // Gaps between nav items, but not on the last one
       &:last-child {
         margin-right: 0px;
@@ -88,7 +100,7 @@
         text-align: center;
   
         > svg {
-          fill: $dark-purple;
+          fill: $medium-green;
         }
       }
   
@@ -101,7 +113,7 @@
         display: block;
         padding-bottom: 5px;
       }
-  
+
       .page-link {
         display: block;
         padding: 5px 10px;
@@ -113,20 +125,27 @@
       }
     }
   }
-  
-  
+
+  .site-button {
+    border: 4px solid $light-green;
+    border-radius: 5px;
+    color: $light-green;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+   }
+
   
   /**
    * Site footer
    */
   .site-footer {
     border-top: 1px solid $grey-color-light;
-    padding: 15px 0;
-    padding-top: 35px;
+    padding: 35px 0;
   }
   
   .footer-heading {
-    @include relative-font-size(1.125);
+    @include relative-font-size(1.225);
     margin-bottom: $spacing-unit / 2;
   }
   
@@ -137,9 +156,9 @@
   }
   
   .footer-col-wrapper {
-    @include relative-font-size(0.7375);
+    @include relative-font-size(0.8);
     color: $grey-color;
-    margin-left: $spacing-unit / 2;
+    margin-left: -10px;
     overflow: hidden;
     @extend %clearfix;
   }
@@ -147,7 +166,7 @@
   .footer-col {
     float: left;
     text-align: center;
-    padding-left: $spacing-unit / 2;
+    padding-left: 10px;
   }
   
   .footer-col-1 {
@@ -210,14 +229,13 @@
     height: 18px;
   }
   
-  
   /**
    * Page content
    */
   .page-content {
     padding: 0px;
     flex: 1;
-    margin: $spacing-unit 0px;
+    margin: 25px 0px;
   }
 
   .page-img {
@@ -235,8 +253,6 @@
     @include relative-font-size(1.75);
   }
   
-  
-  
   .post-meta {
     font-size: $small-font-size;
     color: $grey-color;
@@ -246,8 +262,6 @@
     display: block;
     @include relative-font-size(1.5);
   }
-  
-  
   
   /**
    * Posts
@@ -260,10 +274,10 @@
     @include relative-font-size(2.025);
     letter-spacing: -1px;
     line-height: 1;
-  
-    @include media-query($on-laptop) {
-      @include relative-font-size(2.025);
-    }
+  }
+
+  .dt-published {
+    font-size: $base-font-size;
   }
   
   .post-content {
@@ -310,11 +324,9 @@
     }
   }
 
-
   // layout css for home feed
-
   #home-feed-wrapper {
-    padding: 10px;
+    padding: 20px;
     background-color: $light-purple;
   }
 
@@ -328,32 +340,32 @@
 
   .home-feed-header-featured {
     font-family: 'Jadyn', sans-serif;
-    font-size: 70px;
+    font-size: ($base-font-size*4.9);
     display: inline;
     margin-right: 10px;
-    color: $medium-green;
+    color: $light-green;
   }
 
   .home-feed-header-updates {
     font-family: 'Poppins', sans-serif;
     font-weight: lighter;
-    font-size: 30px;
+    font-size: ($base-font-size)*2.2;
     display: inline;
-    color: $medium-green;
+    color: $light-green;
   }
 
   .home-feed-post-wrapper {
     margin-right: 20px;
     margin-left: 0px;
     display: flex;
-    max-width: 200px;
+    width: 220px;
     flex-flow: column nowrap;
     max-height: 386px;
   }
 
   .home-feed-post-date {
     display: block;
-    color: $dark-purple;
+    color: $light-green;
     font-weight: bold;
     text-transform: uppercase;
     @include relative-font-size(0.8);
@@ -362,8 +374,8 @@
 
   .home-feed-post-img {
     display: block;
-    width: 200px;
-    height: 230px;
+    width: 220px;
+    height: 250px;
     object-fit: cover;
 
     &:hover {
@@ -377,25 +389,25 @@
     text-transform: uppercase;
     background-color: $grey-color-light;
     text-align: center;
-    padding: 7px;
+    padding: 17px;
+    line-height: 0px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    @include relative-font-size(0.8);
+    @include relative-font-size(0.9);
     
   }
 
   .home-feed-post-link:hover {
-    background-color: $light-purple;
+    background-color: $lighter-green;
   }
 
   .excerpt {
     display: block;
-    color: $brand-color;
+    color: $grey-excerpt;
     font-weight: light;
-    font-size: 12px;
+    font-size: ($base-font-size)*0.8666;
     margin-top: 10px;
-      
       
       
     > p { 
@@ -410,9 +422,215 @@
       }
     }
 
-    //css for logo
+    //css for home page "about us" section
+    #home-about-wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      justify-content: center;
 
- 
+      @include media-query($on-laptop) {
+        flex-flow: column wrap;
+        align-items: center;
+       }
+    }
+
+    #home-about-img-container {
+      display: flex;
+      width: 50%;
+      justify-content: left;
+
+      @include media-query($on-laptop) {
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+       }
+    }
+
+    #home-about-img {
+      width: 70%;
+      height: auto;
+    }
+
+    #home-about-excerpt-container {
+      display: flex;
+      width: 50%;
+      flex-flow: column nowrap;
+      align-items: flex-end;
+      justify-content: center;
+
+      @include media-query($on-laptop) {
+        width: 100%;
+       }
+    }
+
+    #home-about-title {
+      color: $light-green;
+      font-size: ($base-font-size)*2.5;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    #home-about-excerpt {
+      text-align: right;
+      color: $grey-excerpt;
+    }
+
+    #home-about-button {
+      width: 30%;
+      margin-top: 10px;
+      @include media-query($on-laptop) {
+        width: 50%;
+       }
+    }
+
+    //css for logo
     .logo-container-img {
       position: static;
     }
+
+    // css for journal tiles
+    .location-wrapper {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+    }
+
+    .location-box {
+      position: relative;
+      text-align: center;
+      width: 280px;
+      height: 280px;
+      margin: 15px;
+      border: none;
+
+      @include media-query($on-laptop) {
+       width: 150px;
+       height: 150px;
+       margin: 6px;
+      }
+    }
+
+
+    .location-box-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &:hover + .location-title {
+        display: block;
+      }
+
+      @include media-query($on-laptop) {
+        opacity: 0.5;
+      }
+    }
+
+    .location-title {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #020202;
+
+      &:hover {
+        display: block;
+      }
+      &:hover + .location-box-img {
+        opacity: 0.5;
+      }
+
+      @include media-query($on-laptop) {
+        display: block;
+      }
+    }
+
+//css for category post list
+
+.category-title {
+  font-family: 'Jadyn', sans-serif;
+  font-size: ($base-font-size)*6;
+  text-align: center;
+  color: $light-green;
+  line-height: 60px;
+  margin-bottom: 25px;
+  }
+
+.category-post-list {
+  margin-left: 0px; 
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap; //to add scrollbar, change to nowrap.
+  justify-content: space-around;
+  background-color: white;
+
+  > li {
+    margin-bottom: $spacing-unit;
+    display: inline-block;
+    box-sizing: border-box;
+    max-width: 220px;
+  }
+}
+
+.category-post-wrapper {
+  margin-right: 20px;
+  margin-left: 0px;
+  display: flex;
+  width: 220px;
+  flex-flow: column nowrap;
+  max-height: 386px;
+}
+
+.category-post-img {
+    display: block;
+    width: 220px;
+    height: 250px;
+    object-fit: cover;
+}
+
+//about page
+
+.about-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+
+  @include media-query($on-laptop) {
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+}
+
+
+.about-personal-info {
+  background-color: white;
+  word-break: break-word;
+  padding: 10px;
+}
+
+#about-info-ctgry {
+ // font-size: ($base-font-size)*1.1;
+  font-weight: bold;
+  display: inline;
+}
+
+.about-img {
+  height: 400px;
+  width: 300px;
+  object-fit: cover;
+  transform: scaleX(-1);
+  padding: 10px;
+}
+

@@ -1,18 +1,12 @@
 <header class="site-header" role="banner">
 
-  <div class="slideshow-wrapper">
+  <div class="middle-wrapper">
       {%- assign default_paths = site.pages | map: "path" -%}
       {%- assign page_paths = site.header_pages | default: default_paths -%}
 
       {%- if page_paths -%}       
-      
-      <div style="display: flex; align-items: center; justify-content: space-between;">
-
-      <a class="site-title-wrapper" href="/home/">
-        <p class="site-title">AM</p>
-        <img src="/assets/logos/medium-purple-earth.png" width="30px;" style="padding: 0px 6px 0px 6px;">
-        <p class="site-title">ABROAD</p>
-      </a>
+      {% comment %} <div style="display: flex; align-items: center; justify-content: space-between;"> {% endcomment %}
+      <div style="display: flex; align-items: center; justify-content: center;">
 
       <nav class="site-nav">
           <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -28,8 +22,13 @@
           <div class="trigger">
             <a class="page-link" href="/home/">HOME</a>
             <a class="page-link" href="/journal/">JOURNAL</a> 
+            <a class="site-title-wrapper" href="/home/">
+              <p class="site-title" style="margin: 0px 0px 0px 20px;">AM</p>
+              <img src="/assets/logos/medium-green-earth.png" width="30px;" style="padding: 0px 6px 0px 6px;">
+              <p class="site-title" style="margin: 0px 20px 0px 0px;">ABROAD</p>
+            </a>
             <a class="page-link" href="/about/">ABOUT US</a>
-            <a class="page-link" href="/contact/">CONTACT</a> 
+            <a class="page-link" id="last-nav-link" href="/contact/">CONTACT</a> 
           </div>
 
       </nav>

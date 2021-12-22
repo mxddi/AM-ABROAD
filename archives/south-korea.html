@@ -1,0 +1,41 @@
+---
+layout: default
+title: South Korea
+permalink: /places/south-korea/
+---
+
+ {%- assign posts = site.posts-%}
+
+<div class="full-wrapper">
+  <div class="middle-wrapper">
+
+    <p class="category-title">seoul</p>
+
+    <ul class="category-post-list">
+          {%- for post in site.posts -%}
+          {%- if post.categories %}
+            <li>
+              <div class="category-post-wrapper">         
+                  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                  <span class="home-feed-post-date">{{ post.date | date: date_format }}</span>
+                  
+                  {%- if post.image %}
+                  <a href="{{ post.url | relative_url }}"><img class="category-post-img" src={{post.image | escape }}></a>
+                  {%- endif -%}
+
+                  <a class="home-feed-post-link" href="{{ post.url | relative_url }}" style="color: #8859AD">
+                    {{ post.title | escape }}
+                  </a>
+
+                  
+                  <div class ="excerpt">
+                    {{ post.excerpt }}
+                  </div>
+
+              </div>
+            </li>
+          {%- endif -%}
+          {%- endfor -%}
+      </ul>
+    </div>
+  </div>

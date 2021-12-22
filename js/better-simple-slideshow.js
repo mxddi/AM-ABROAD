@@ -1,3 +1,9 @@
+/* ---------------------------------------------------------------------------------
+
+Code snippet courtesy of Mark Lee themarklee.com/2014/10/05/better-simple-slideshow/
+
+--------------------------------------------------------------------------------- */
+
 var makeBSS = function (el, options) {
     var $slideshows = document.querySelectorAll(el), // a collection of all of the slideshow
         $slideshow = {},

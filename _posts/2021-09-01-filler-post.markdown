@@ -2,6 +2,7 @@
 layout: post
 title:  "Third Blog Post to Date."
 date:   2021-09-01
+author: Maddi
 categories: welcome
 image: /assets/images/maddi-alex-1.JPEG
 ---
