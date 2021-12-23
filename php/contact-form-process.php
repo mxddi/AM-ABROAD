@@ -73,5 +73,5 @@ if (isset($_POST['Email'])) {
 
 <?php
 
-}
+}  
 ?>
