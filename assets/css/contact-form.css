@@ -1,21 +1,29 @@
-#fcf-form {
-    display:block;
+.fcf-h4 {
+    color: #7D7D7D;
+}
+
+.fcf-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 .fcf-body {
-    margin: 0;
-    font-family: -apple-system, Arial, sans-serif;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.5;
     color: #212529;
-    text-align: left;
-    background-color: #fff;
-    padding: 30px;
-    padding-bottom: 10px;
-    border: 1px solid #ced4da;
+    background-color: #e1d8eb;
+    padding: 20px;
     border-radius: 0.25rem;
-    max-width: 100%;
+    width: 35%;
+    margin: 0px;
+}
+
+#fcf-body-mssg {
+    width: 55%;
+    margin: 0px;
 }
 
 .fcf-form-group {
@@ -31,6 +39,11 @@
     -ms-flex-align: stretch;
     align-items: stretch;
     width: 100%;
+}
+
+#fcf-excerpt {
+    font-size: 13px;
+    color: #828282;
 }
 
 .fcf-form-control {
@@ -66,6 +79,7 @@ textarea.fcf-form-control {
 label.fcf-label {
     display: inline-block;
     margin-bottom: 0.5rem;
+    color: #7D7D7D;
 }
 
 .fcf-credit {
