@@ -5,6 +5,8 @@
 .fcf-wrapper {
     display: flex;
     justify-content: space-between;
+    
+    
 }
 
 .fcf-body {
@@ -171,4 +173,23 @@ label.fcf-label {
 
 input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[type="button"].fcf-btn-block {
     width: 100%;
+}
+
+@media (max-width: 800px) {
+    .fcf-wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        border-radius: 0px;
+    }
+
+    .fcf-body {
+        width: 100%;
+        border-radius: 0.25rem 0.25rem 0 0;
+    }
+
+    #fcf-body-mssg {
+        width: 100%;
+        border-radius: 0 0 0.25rem 0.25rem;
+    }
 }
