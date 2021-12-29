@@ -376,10 +376,10 @@
 
   .home-feed-post-date {
     display: block;
-    color: $medium-purple;
-    font-weight: 600;
+    color: $brand-color;
+    font-weight: 400;
     text-transform: uppercase;
-    @include relative-font-size(0.8);
+    @include relative-font-size(0.867);
     margin-bottom: 5px;
   }
 
@@ -399,8 +399,7 @@
     font-weight: 600;
     text-transform: uppercase;
     color: $brand-color;
-    padding: 17px;
-    padding-left: 0px;
+    padding: 17px 17px 1px 0px;
     //line-height: 0px; //0px for one line
     text-overflow: ellipsis;
     //white-space: nowrap; //nowrap for one line
