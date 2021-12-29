@@ -141,6 +141,7 @@
     padding: 5px;
     text-align: center;
     font-family: 'Poppins';
+    font-weight: 700;
    }
 
   
@@ -282,6 +283,7 @@
     @include relative-font-size(2.025);
     letter-spacing: -1px;
     line-height: 1;
+    color: $brand-color;
   }
 
   .dt-published {
@@ -315,7 +317,7 @@
       }
     }
   }
-  
+
   .post-list {
     margin-left: 0px; 
     list-style: none;
@@ -329,6 +331,7 @@
       margin-bottom: $spacing-unit;
       display: inline-block;
       box-sizing: border-box;
+      padding: 10px;
     }
   }
 
@@ -348,33 +351,33 @@
 
   .home-feed-header-featured {
     font-family: 'Jadyn', sans-serif;
-    font-size: ($base-font-size*4.9);
+    font-size: ($base-font-size*4.8);
     display: inline;
     margin-right: 10px;
-    color: $medium-green;
+    color: $medium-purple;
   }
 
-  .home-feed-header-updates {
+  /* .home-feed-header-updates {
     font-family: 'Poppins', sans-serif;
     font-weight: lighter;
     font-size: ($base-font-size)*2.2;
     display: inline;
     color: $medium-green;
-  }
+  } */
 
   .home-feed-post-wrapper {
     margin-right: 20px;
     margin-left: 0px;
     display: flex;
-    width: 220px;
     flex-flow: column nowrap;
-    max-height: 386px;
+    max-height: 450px;
+    width: 220px;
   }
 
   .home-feed-post-date {
     display: block;
-    color: $medium-green;
-    font-weight: bold;
+    color: $medium-purple;
+    font-weight: 600;
     text-transform: uppercase;
     @include relative-font-size(0.8);
     margin-bottom: 5px;
@@ -393,22 +396,22 @@
 
   .home-feed-post-link {
     
-    font-weight: bold;
+    font-weight: 600;
     text-transform: uppercase;
-    background-color: $grey-color-light;
-    text-align: center;
+    color: $brand-color;
     padding: 17px;
-    line-height: 0px;
+    padding-left: 0px;
+    //line-height: 0px; //0px for one line
     text-overflow: ellipsis;
-    white-space: nowrap;
+    //white-space: nowrap; //nowrap for one line
     overflow: hidden;
-    @include relative-font-size(0.9);
+    @include relative-font-size(1);
     
   }
-
+/* 
   .home-feed-post-link:hover {
     background-color: $medium-green;
-  }
+  } */
 
   .excerpt {
     display: block;
