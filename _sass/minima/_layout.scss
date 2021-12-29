@@ -8,7 +8,7 @@
     font-weight: light;
     background-color: rgba(255, 255, 255, 0.85);
     // Positioning context for the mobile navigation icon
-    position: sticky; top:0;//specify starting point of 0
+    position: sticky; top: 0;//specify starting point of 0
     z-index: 8;
     margin-top: 25px;
   }
@@ -18,7 +18,7 @@
     @include relative-font-size(1.58);
     font-weight: 300;
     font-family: 'Abril Fatface', sans-serif;
-    color: $medium-green;
+    color: $brand-color;
     line-height: $base-line-height * $base-font-size * 2.5;
     letter-spacing: 1px;
     margin-bottom: 0;
@@ -26,23 +26,31 @@
     display: inline;
   }
 
+  #site-title-mobile {
+    display: none;
+    @include media-query($on-laptop) {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      max-width: min-content;
+     }
+  }
 
-  .site-title-wrapper {
+  #site-title-widescreen {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     max-width: min-content;
-
     @include media-query($on-laptop) {
       display: none;
      }
   }
   
   .site-nav {
-    float: right;
     display: flex;
+    float: right;
     line-height: $base-line-height * $base-font-size * 2.5;
 
- 
     .nav-trigger {
         display: none;
     }
@@ -51,7 +59,7 @@
       display: flex;
       justify-content: space-between;
       @include media-query($on-laptop) {
-      flex-direction: column;
+      flex-flow: column wrap;
        }
     }
   
@@ -60,7 +68,7 @@
     }
   
     .page-link {
-      color: $medium-green;
+      color: $brand-color;
       line-height: $base-line-height;
       margin: 20px 45px;
       white-space: nowrap;
@@ -100,7 +108,7 @@
         text-align: center;
   
         > svg {
-          fill: $medium-green;
+          fill: $brand-color;
         }
       }
   
@@ -127,12 +135,12 @@
   }
 
   .site-button {
-    border: 4px solid $light-green;
+    border: 4px solid $medium-green;
     border-radius: 5px;
-    color: $light-green;
+    color: $medium-green;
     padding: 5px;
     text-align: center;
-    font-weight: bold;
+    font-family: 'Poppins';
    }
 
   
@@ -343,7 +351,7 @@
     font-size: ($base-font-size*4.9);
     display: inline;
     margin-right: 10px;
-    color: $light-green;
+    color: $medium-green;
   }
 
   .home-feed-header-updates {
@@ -351,7 +359,7 @@
     font-weight: lighter;
     font-size: ($base-font-size)*2.2;
     display: inline;
-    color: $light-green;
+    color: $medium-green;
   }
 
   .home-feed-post-wrapper {
@@ -365,7 +373,7 @@
 
   .home-feed-post-date {
     display: block;
-    color: $light-green;
+    color: $medium-green;
     font-weight: bold;
     text-transform: uppercase;
     @include relative-font-size(0.8);
@@ -399,7 +407,7 @@
   }
 
   .home-feed-post-link:hover {
-    background-color: $lighter-green;
+    background-color: $medium-green;
   }
 
   .excerpt {
@@ -467,7 +475,7 @@
     }
 
     #home-about-title {
-      color: $light-green;
+      color: $medium-green;
       text-align: right;
     }
 
@@ -558,7 +566,7 @@
   font-family: 'Jadyn', sans-serif;
   font-size: ($base-font-size)*6;
   text-align: center;
-  color: $light-green;
+  color: $medium-green;
   line-height: 60px;
   margin-bottom: 25px;
   }
@@ -602,7 +610,7 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  margin-top: 15px;
 
   @include media-query($on-laptop) {
     justify-content: center;
@@ -611,6 +619,35 @@
   }
 }
 
+.about-both-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  background-color: $light-purple;
+  margin-bottom: 30px;
+
+  @include media-query($on-laptop) {
+    flex-flow: column nowrap;
+  }
+}
+
+.about-both-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+
+  @include media-query($on-laptop) {
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+}
+
+.about-both-info {
+  text-align: right;
+  word-break: break-word;
+  padding: 30px;
+}
 
 .about-personal-info {
   background-color: white;
@@ -624,6 +661,19 @@
   display: inline;
 }
 
+#about-both-img-container {
+  background-image: url(/assets/images/IMG_7202.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 450px;
+}
+
+#about-both-img {
+  height: 450px;
+  width: 350px;
+  object-fit: cover;
+}
+
 .about-img {
   height: 400px;
   width: 300px;
@@ -631,4 +681,6 @@
   transform: scaleX(-1);
   padding: 10px;
 }
+
+
 
