@@ -50,6 +50,7 @@
     display: flex;
     float: right;
     line-height: $base-line-height * $base-font-size * 2.5;
+    letter-spacing: 3px;
 
     .nav-trigger {
         display: none;
@@ -352,6 +353,7 @@
   .home-feed-header-featured {
     font-family: 'Jadyn', sans-serif;
     font-size: ($base-font-size*4.8);
+    line-height: 0px;
     display: inline;
     margin-right: 10px;
     color: $medium-purple;
@@ -628,7 +630,7 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  background-color: $light-purple;
+  //background-color: $light-purple;
   margin-bottom: 30px;
 
   @include media-query($on-laptop) {
@@ -638,8 +640,8 @@
 
 .about-both-container {
   display: flex;
+  flex-flow: column wrap;
   justify-content: center;
-  align-items: center;
   width: 50%;
 
   @include media-query($on-laptop) {
@@ -651,7 +653,11 @@
 .about-both-info {
   text-align: right;
   word-break: break-word;
-  padding: 30px;
+  padding: 20px 70px;
+
+  @include media-query($on-laptop) {
+    padding: 30px 50px;
+  }
 }
 
 .about-personal-info {
@@ -670,7 +676,7 @@
   background-image: url('https://live.staticflickr.com/65535/51784018593_94528287d1_h.jpg');
   background-position: center;
   background-size: cover;
-  height: 450px;
+  height: 705px;
 }
 
 /* #optimized-background-image {
