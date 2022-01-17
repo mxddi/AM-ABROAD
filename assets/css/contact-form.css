@@ -18,7 +18,7 @@
     color: #212529;
     background-color: #e1d8eb;
     padding: 20px;
-    border-radius: 0.25rem;
+    border-radius: 0.2rem;
     width: 35%;
     margin: 0px;
 }
@@ -61,7 +61,7 @@
     background-clip: padding-box;
     border: 1px solid #ced4da;
     outline: none;
-    border-radius: 0.25rem;
+    border-radius: 0.2rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -121,7 +121,7 @@ label.fcf-label {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     line-height: 1.5;
-    border-radius: 0.25rem;
+    border-radius: 0.2rem;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -190,11 +190,11 @@ input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[typ
 
     .fcf-body {
         width: 100%;
-        border-radius: 0.25rem 0.25rem 0 0;
+        border-radius: 0.2rem 0.2rem 0 0;
     }
 
     #fcf-body-mssg {
         width: 100%;
-        border-radius: 0 0 0.25rem 0.25rem;
+        border-radius: 0 0 0.2rem 0.2rem;
     }
 }
