@@ -639,6 +639,7 @@
 
   @include media-query($on-laptop) {
     flex-flow: column nowrap;
+    margin-top: 0px;
   }
 }
 
