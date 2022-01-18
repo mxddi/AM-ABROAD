@@ -669,6 +669,11 @@
   background-color: white;
   word-break: break-word;
   padding: 10px;
+  margin-right: 35px;
+
+  @include media-query($on-laptop) {
+    margin-right: 0px;
+  }
 }
 
 #about-info-ctgry {
@@ -714,7 +719,6 @@
   height: 400px;
   width: 300px;
   object-fit: cover;
-  transform: scaleX(-1);
   padding: 10px;
 }
 
