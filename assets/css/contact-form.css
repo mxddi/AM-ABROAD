@@ -1,5 +1,10 @@
 .fcf-h4 {
-    color: #7D7D7D;
+    color: #bcdbd1;
+    font-family: 'jadyn';
+    font-size: 70px;
+    text-transform: lowercase;
+    font-weight: 500;
+    line-height: 1;
 }
 
 .fcf-wrapper {
@@ -16,7 +21,7 @@
     font-size: 1rem;
     font-weight: 400;
     color: #212529;
-    background-color: #e1d8eb;
+    background-color: #bcdbd1;
     padding: 20px;
     border-radius: 0.2rem;
     width: 35%;
@@ -86,22 +91,6 @@ label.fcf-label {
     letter-spacing: 1.5px;
 }
 
-.fcf-credit {
-    padding-top: 10px;
-    font-size: 0.9rem;
-    color: #545b62;
-}
-
-.fcf-credit a {
-    color: #545b62;
-    text-decoration: underline;
-}
-
-.fcf-credit a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
 .fcf-btn {
     display: inline-block;
     color: #212529;
@@ -117,6 +106,7 @@ label.fcf-label {
     font-weight: 400;
     font-size: 16px;
     font-family: 'Poppins';
+    font-weight: 600;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -143,20 +133,20 @@ label.fcf-label {
 
 .fcf-btn-primary {
     color: #fff;
-    background-color: #afdd9c;
-    border-color: #afdd9c;
+    background-color: #76b19e;
+    border-color: #76b19e;
 }
 
 .fcf-btn-primary:hover {
     color: #fff;
-    background-color: #94bb83;
-    border-color: #94bb83;
+    background-color: #6ba18f;
+    border-color: #6ba18f;
 }
 
 .fcf-btn-primary:focus, .fcf-btn-primary.focus {
     color: #fff;
-    background-color: #94bb83;
-    border-color: #94bb83;
+    background-color: #6ba18f;
+    border-color: #6ba18f;
     box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
 

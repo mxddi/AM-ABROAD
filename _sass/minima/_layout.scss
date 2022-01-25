@@ -292,8 +292,29 @@
     font-size: $base-font-size;
   }
   
+  .right-img {
+    height: auto;
+    width: 350px;
+    float: right;
+    margin: 50px 0px 50px 50px;
+  }
+
+  .left-img {
+    height: auto;
+    width: 350px;
+    float: left;
+    margin: 50px 50px 50px 0px;
+  }
+
   .post-content {
     margin-bottom: $spacing-unit;
+
+    img {
+      height: auto;
+      width: 350px;
+      float: right;
+      margin: 50px;
+    }
   
     h2 {
       @include relative-font-size(2);
@@ -340,7 +361,7 @@
   // layout css for home feed
   #home-feed-wrapper {
     padding: 20px;
-    background-color: $light-purple;
+    background-color: $light-green-color;
   }
 
   .home-feed-header {
@@ -358,7 +379,7 @@
     letter-spacing: 2px;
     display: inline;
     margin-right: 10px;
-    color: $medium-purple;
+    color: $dark-green-color;
   }
 
   /* .home-feed-header-updates {
@@ -484,7 +505,7 @@
     }
 
     #home-about-title {
-      color: $medium-green;
+      color: $light-green-color;
       text-align: right;
     }
 
@@ -496,6 +517,8 @@
     #home-about-button {
       margin-top: 10px;
       padding: 7px;
+      color: $light-green-color;
+      border-color: $light-green-color;
     }
 
     //css for logo

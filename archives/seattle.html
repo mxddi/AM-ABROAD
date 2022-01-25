@@ -1,7 +1,7 @@
 ---
 layout: default
 title: South Korea
-permalink: /places/south-korea/
+permalink: /places/seattle/
 ---
 
  {%- assign posts = site.posts-%}
@@ -9,11 +9,10 @@ permalink: /places/south-korea/
 <div class="full-wrapper">
   <div class="middle-wrapper">
 
-    <p class="category-title">seoul</p>
+    <p class="category-title">seattle</p>
 
     <ul class="category-post-list">
-          {%- for post in site.posts -%}
-          {%- if post.categories %}
+          {%- for post in site.categories.seattle -%}
             <li>
               <div class="category-post-wrapper">         
                   {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -34,7 +33,6 @@ permalink: /places/south-korea/
 
               </div>
             </li>
-          {%- endif -%}
           {%- endfor -%}
       </ul>
     </div>
